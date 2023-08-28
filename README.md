@@ -11,3 +11,5 @@
 3. Diseño de procesos automatizados de evaluación de pronósticos.
  - Criterios simétricos
  - Criterios asimétricos
+
+Se creará una carpeta para cada objetivo y se actualizará conforme se avance en el proyecto.
