@@ -7,6 +7,18 @@ from numpy import nan
 
 """
 ---------------------------------------
+Funciones contenidas en este archivo:
+
+1. descargar_banxico(serie,fecha_inicio,fecha_fin,token=token_1,es_oportuno=False)
+2. descargar_imf(serie,fecha_inicio,fecha_fin,paises='All')
+    2.1. busqueda_glosario_imf(palabra_clave)
+3. descargar_inegi(serie,fecha_inicio,fecha_fin,TOKEN=token_11)
+
+
+"""
+
+"""
+---------------------------------------
 FUNCIÓN PARA DESCARGAR DATOS DE BANXICO
 ---------------------------------------
 ---------------------------------------
@@ -109,7 +121,7 @@ FUNCIÓN PARA DESCARGAR DATOS DEL INEGI
 """
 
 """
-Estas funciones son preliminares que alimentan la función de descarga, provistas por el INEGI desde su página
+Estas primeras funciones son preliminares que alimentan la función de descarga, provistas por el INEGI desde su página
 """
 
 token_11='8f108d9b-a840-3d04-f180-25d11dd88a7a'
@@ -248,7 +260,7 @@ class INEGI_BI:
                     n_df.loc[idx,col] = 'La información no existe'
         return n_df
 
-def descarga_inegi(serie,fecha_inicio,fecha_fin,TOKEN=token_11):
+def descargar_inegi(serie,fecha_inicio,fecha_fin,TOKEN=token_11):
     """
     Función para descargar las series del INEGI, una por una
 
