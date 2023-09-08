@@ -43,7 +43,7 @@ def descargar_banxico(serie,fecha_inicio,fecha_fin,token=token_1,es_oportuno=Fal
     response = requests.get(url,headers=headers)
     status=response.status_code
     raw_data = response.json()
-    T=np.shape(serie.split(","))[0]
+    T=len(serie.split(","))
     info={'fecha':pd.DataFrame(raw_data['bmx']['series'][0]['datos'])['fecha']}
 
     for i in range(T):
