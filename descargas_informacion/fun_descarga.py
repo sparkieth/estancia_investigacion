@@ -98,7 +98,7 @@ def busqueda_glosario_imf(palabra_clave):
     glosario={key: value.lower() for key, value in glosario.items() if value is not None}
     busqueda={}
     for key,val in glosario.items():
-        if palabra_clave in val:
+        if palabra_clave.lower() in val:
             busqueda.update({key:val})
     return busqueda
 """
