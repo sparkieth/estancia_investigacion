@@ -52,6 +52,7 @@ def descargar_banxico(serie,fecha_inicio,fecha_fin,token=token_1,es_oportuno=Fal
         data=raw_data['bmx']['series'][i]['datos']
         
         df=pd.DataFrame(data)
+        df['dato'] = df['dato'].str.replace(',', '', regex=True).str.extract('(\d+\.\d+)')[0].astype(float)
         df['dato'] = df['dato'].apply(lambda x:float(x))
         info[titulo]=df['dato']
     info=pd.DataFrame(info)
