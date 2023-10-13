@@ -1,0 +1,15 @@
+# Reporte de pronósticos de series de tiempo para cuenta corriente
+
+Este reporte tiene como objeto describir el proceso de creación de modelos econométricos y de redes neuronales usados para pronosticar las series de cuenta corriente, IGAE, inversión fija bruta, tipo de cambio y remesas como regresores
+
+Dado que las cifras de cuenta corriente se encuentran en constante revisión que pueden durar incluso varios años, es necesario guardar las cifras con las que se realizaron los pronósticos, ya que éstas pueden cambiar abruptamente. 
+
+## Análisis exploratorio de datos (EDA en inglés)
+
+Se observa que la cuenta de crédito de cuenta corriente más grande proviene de la cuenta de bienes, la cual comprenden exportaciones de mercancías y asciende a más de 175 mil millones de pesos. Por su parte, la segunda cuenta más grande (aunque considerablemente más chica que la cuenta de bienes) es la cuenta de ingresos secundarios, los cuales son casi su totalidad ingresos por remesas y ascienden a poco menos de 23 mil millones de pesos. 
+
+Por su parte, la cuenta de servicios primarios de crédito comprende utilidades, dividendos, intereses y remuneración de empleados, y ascendió a poco menos de 23 mil millones de pesos. Por otro lado, las de servicios suman transporte, viajes, servicios empresariales, propiedad intelectual entre los más importantes. 
+
+No obstante, en saldos netos (débito - crédito) la cuenta corriente de bienes, servicios e ingresos primarios se encuentra en saldos positivos, mientras que sólo la cuenta de ingresos secundarios se encuentra en saldos negativos. Por otro lado, se observa un poco de estacionalidad en las cuentas de ingresos primarios e ingresos secundarios.
+
+![Cuenta corriente - crédito](../figuras/CC_credito.pdf)
