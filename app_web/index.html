@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Paso 1) Inserta tu matriz de variables en formato csv (no debe tener columnas o filas en blanco):</p>
+    <!-- <form method=post enctype=multipart/form-data>
+      <input type="file" name="file">
+    </form> -->
+    <input id="file" type="file">
+    <p> Paso 2) ¿Cuál es la variable objetivo? Inserta el número de columna (empieza en uno):</p>
+    <p>Columna objetivo: <input id="columna" type = "number" placeholder = 1 /></p>
+    <p>Número de periodos a pronosticar: <input id="periodos" type = "number" placeholder = 24 /></p>
+    <button id="init">Iniciar</button>
+    <script>
+        const column=document.getElementById("columna")
+        const n_per=document.getElementById("periodos")
+        const data=document.getElementById("file")
+        let archivo;
+        let form;
+        data.onchange=()=>{
+            archivo=data.files[0]
+            console.log(archivo)
+        }
+        document.getElementById("init").addEventListener("click", ()=>{
+            form=new FormData();
+            form.append("obj",column.value)
+            form.append("periodos",n_per.value)
+            form.append("file",archivo)
+            form.append("init","Iniciar pronóstico")
+            fetch("http://81c7-34-32-204-243.ngrok-free.app/data",{
+                method:"POST",
+                body:form
+            }).then((r)=>{
+                console.log(r)
+                console.log("hola")
+            }).catch((c)=>{
+                console.log(c)
+            })
+        },false)
+    </script>
+    </body>
+</html>
