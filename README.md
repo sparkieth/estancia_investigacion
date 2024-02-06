@@ -13,3 +13,5 @@
  - Criterios asimétricos
 
 Se creará una carpeta para cada objetivo y se actualizará conforme se avance en el proyecto.
+
+En la página de inicio se pondrán los archivos principales que desarrollaron los ARIMAS, las redes y la app web.
