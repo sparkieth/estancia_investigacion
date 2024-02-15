@@ -14,4 +14,8 @@
 
 Se creará una carpeta para cada objetivo y se actualizará conforme se avance en el proyecto.
 
+<<<<<<< HEAD
 En la página de inicio se pondrán los archivos principales que desarrollaron los ARIMAS, las redes y la app web.
+=======
+Este repositorio tiene archivos pdf, png y excel porque está pensado para interactura con una persona que podría tener un nivel principiante en Python
+>>>>>>> 505ad93 (se actualiza)
